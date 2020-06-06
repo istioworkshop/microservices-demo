@@ -19,15 +19,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emailservice
+  name: emailservice-v1
+  labels:
+    app: emailservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: emailservice
+      version: v1
   template:
     metadata:
       labels:
         app: emailservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -74,15 +79,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: checkoutservice
+  name: checkoutservice-v1
+  labels:
+    app: checkoutservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: checkoutservice
+      version: v1
   template:
     metadata:
       labels:
         app: checkoutservice
+        version: v1
     spec:
       containers:
         - name: server
@@ -142,15 +152,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: recommendationservice
+  name: recommendationservice-v1
+  labels:
+    app: recommendationservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: recommendationservice
+      version: v1
   template:
     metadata:
       labels:
         app: recommendationservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -201,15 +216,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-v1
+  labels:
+    app: frontend
+    version: v1
 spec:
   selector:
     matchLabels:
       app: frontend
+      version: v1
   template:
     metadata:
       labels:
         app: frontend
+        version: v1
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
@@ -296,15 +316,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paymentservice
+  name: paymentservice-v1
+  labels:
+    app: paymentservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: paymentservice
+      version: v1
   template:
     metadata:
       labels:
         app: paymentservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -345,15 +370,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productcatalogservice
+  name: productcatalogservice-v1
+  labels:
+    app: productcatalogservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: productcatalogservice
+      version: v1
   template:
     metadata:
       labels:
         app: productcatalogservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -402,15 +432,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cartservice
+  name: cartservice-v1
+  labels:
+    app: cartservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: cartservice
+      version: v1
   template:
     metadata:
       labels:
         app: cartservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -492,15 +527,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: currencyservice
+  name: currencyservice-v1
+  labels:
+    app: currencyservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: currencyservice
+      version: v1
   template:
     metadata:
       labels:
         app: currencyservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
@@ -548,15 +588,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shippingservice
+  name: shippingservice-v1
+  labels:
+    app: shippingservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: shippingservice
+      version: v1
   template:
     metadata:
       labels:
         app: shippingservice
+        version: v1
     spec:
       containers:
       - name: server
@@ -605,15 +650,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis-cart
+  name: redis-cart-v1
+  labels:
+    app: redis-cart
+    version: v1
 spec:
   selector:
     matchLabels:
       app: redis-cart
+      version: v1
   template:
     metadata:
       labels:
         app: redis-cart
+        version: v1
     spec:
       containers:
       - name: redis
@@ -658,15 +708,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: adservice
+  name: adservice-v1
+  labels:
+    app: adservice
+    version: v1
 spec:
   selector:
     matchLabels:
       app: adservice
+      version: v1
   template:
     metadata:
       labels:
         app: adservice
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
